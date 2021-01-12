@@ -117,13 +117,25 @@ class Main {
     if (bestPosition == -1) {
       for (bestPosition = 0; bestPosition < board.length; bestPosition++) {
         if (board[bestPosition].equals("")) {
-          if (bestPosition == 1 && board[7].equals("")) {
+          if (bestPosition == 1 && board[1].equals("")
+              && board[7].equals("")) {
             return bestPosition;
-          } else if (bestPosition == 7 && board[1].equals("")) {
+          } else if (bestPosition == 7 && board[7].equals("")
+                     && board[1].equals("")) {
             return bestPosition;
-          } else if (bestPosition == 3 && board[5].equals("")) {
+          } else if (bestPosition == 3 && board[3].equals("")
+                     && board[5].equals("")) {
             return bestPosition;
-          } else if (bestPosition == 5 && board[3].equals("")) {
+          } else if (bestPosition == 5 && board[5].equals("")
+                     && board[3].equals("")) {
+            return bestPosition;
+          } else if (bestPosition == 1 && board[1].equals("")) {
+            return bestPosition;
+          } else if (bestPosition == 7 && board[7].equals("")) {
+            return bestPosition;
+          } else if (bestPosition == 3 && board[3].equals("")) {
+            return bestPosition;
+          } else if (bestPosition == 5 && board[5].equals("")) {
             return bestPosition;
           }
         }
